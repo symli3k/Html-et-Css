@@ -1,0 +1,147 @@
+body{
+    font-family: "font-*l" serif;
+    background: url(./assets/bg.jpg)no-repeat fixed center/
+    cover;
+    height: 100vh;
+    
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    color: darkblue;
+    text-shadow: 5px 0 0 rgba(79, 185, 185, 0.712);
+    text-align: center;
+    font-family: "Parisienne", cursive;
+}
+
+
+main {
+    background: whitesmoke;
+    width: 90%;
+    min-height: 500px;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 2px 12px 5px rgba(0, 0, 0, 0.96);
+  }
+  .positioning,
+  .flexbox,
+  .grid {
+      border: 2px solid skyblue;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 10px;
+  }
+
+  /********* Postionning ****************************/
+
+  .positioning {
+      position: relative;
+  }
+
+
+  h2{
+      margin: 0;
+  }
+
+  #circle {
+      height: 60px;
+      width: 60px;
+      background: skyblue;
+      padding: 20px;
+      border-radius: 50%;
+      position: absolute;
+      top: -10px;
+      right: 110px;
+      box-shadow: 0 2px 12px 5px rgba(51, 51, 51, 0.13);
+      z-index: 1;
+
+      
+  }
+
+  #rectangle {
+      height: 15px;
+      width: 100px;
+      background: slateblue;
+      padding: 20px;
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
+  /********************** Flex box ***************************/
+  ul {
+      display: flex;
+      justify-content: space-around;
+      padding: 0;
+  }
+  li {
+      list-style-type: none;
+      font-size: 0.7ren;
+      height: 160px;
+      width: 160px;
+      background: turquoise;
+      /* cntre vesrticalement */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  /***************** Grid ***************/
+
+  .grid-container {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      padding: 20px;
+  }
+
+  .img {
+      text-align: center;
+  }  
+
+  form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: 
+      'i1 i2'
+      'ta ta'
+      'bt bt';
+  }
+  input, 
+  textarea {
+      margin: 5px;
+      height: 45px;
+      border: 1px solid darkblue;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 1.rem;
+      font-family: "font-1";
+  }
+
+
+  #firstname {
+      grid-area: i1;
+  }
+#surname {
+    grid-area: i2;
+}
+textarea {
+    grid-area: ta;
+    resize: none;
+}
+input[type="submit"] {
+    grid-area: bt;
+    cursor: pointer;
+    background: cyan;
+    transition: 0.4s;
+}
+input[type=submit] :hover {
+    background: darkblue;
+    color: white;
+}
+
+/***************** Responsive ******************/
+
